@@ -1,0 +1,56 @@
+port: 8317
+tls:
+  enable: false
+remote-management:
+  allow-remote: false
+  secret-key: "$2a$10$pvZXFQ.0srIqivdC5USTyOUYnwqnW5jpvZFChMh6sIoM89SuSJzVO"
+  disable-control-panel: false
+  panel-github-repository: https://github.com/kongkongyo/Cli-Proxy-API-Management-Center
+auth-dir: /tmp/gitstore/auths
+api-keys:
+  - sk-7355608
+debug: true
+pprof:
+  enable: false
+  addr: 127.0.0.1:8316
+commercial-mode: true
+logging-to-file: true
+error-logs-max-files: 10
+usage-statistics-enabled: true
+force-model-prefix: false
+request-retry: 3
+max-retry-interval: 30
+quota-exceeded:
+  switch-project: true
+  switch-preview-model: true
+routing:
+  strategy: round-robin
+ws-auth: false
+nonstream-keepalive-interval: 0
+oauth-model-alias:
+  antigravity:
+    - name: rev19-uic3-1p
+      alias: gemini-2.5-computer-use-preview-10-2025
+    - name: gemini-3-pro-image
+      alias: gemini-3-pro-image-preview
+    - name: gemini-3-pro-high
+      alias: gemini-3-pro-preview
+    - name: gemini-3-flash
+      alias: gemini-3-flash-preview
+oauth-excluded-models:
+  iflow:
+    - tstars2.0
+    - qwen3-coder-plus
+    - kimi-k2-0905
+    - glm-4.6
+    - kimi-k2-thinking
+    - kimi-k2
+    - deepseek-v3.2-chat
+    - deepseek-v3.2-reasoner
+    - deepseek-v3.1
+    - deepseek-v3
+    - qwen3-235b-a22b-thinking-2507
+    - qwen3-235b-a22b-instruct
+    - qwen3-235b
+    - minimax-m2
+    - iflow-rome-30ba3b
